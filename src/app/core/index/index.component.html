@@ -1,0 +1,41 @@
+<body>
+    <div class="container">
+        <app-navbar></app-navbar>
+        <div class="row mt-4">
+            <div class="col-md-6" style="position: relative;">
+                <h1 class="text-md-left hover-effect">LOS MEJORES EQUIPOS</h1>
+                <img src="assets/index/Pelota.png" alt="Imagen de fútbol"
+                    class="img-fluid mx-auto d-block mt-4 pelota-pequena"
+                    style="margin-top: 50px; position: absolute; bottom: -100px; left: 0;" id="pelota">
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center text-md-right mt-md-4">
+                            <h2 class="hover-effect-h2">Datos de Sport</h2>
+                            <div class="row">
+                                <ng-container *ngFor="let company of Sport">
+                                    <div class="col-lg-3 col-md-6 col-sm-12 py-2">
+                                        <img [src]="company.avatar" alt="" />
+                                        <p class="mb-0" style="color: rgb(0, 0, 0);">{{ company.createdAt}}</p>
+                                        <p class="mb-0" style="color: rgb(255, 255, 255);">{{ company.name }}</p>
+                                        <button class="btn btn-danger btn-sm mt-2"
+                                            (click)="deleteSport(company.id)">Borrar</button>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <button type="button" class="btn btn-primary mt-4"
+                                (click)="createRandomSport()">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,156 @@
+
+/* Estilo de la imagen */
+.img-fluid {
+    max-width: 20%; 
+    height: auto;
+    animation: rotate 4s linear infinite, bounce 0.8s infinite alternate;
+    
+    position: relative;
+    left: 0; 
+    top: 100px; 
+}
+
+
+
+/* Animación de rebote */
+@keyframes bounce {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(-70px);
+    }
+} 
+
+
+/* EFECTOS DE LA PELOTA ....... */
+
+
+#pelota:hover {
+    animation: spin 1s infinite linear, rayo 0.3s infinite; 
+}
+
+/* Animación de giro */
+@keyframes spin {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+
+/* Efecto de rayo */
+@keyframes rayo {
+    0%, 100% {
+        filter: drop-shadow(0 0 0 rgb(255, 0, 0)); 
+    }
+    50% {
+        filter: drop-shadow(0 0 30px rgb(0, 255, 17)); 
+    }
+}
+
+
+
+/*STYLO DE MEJOR FUTBOL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+
+
+.hover-effect {
+    position: relative; 
+    animation: color-change 5s infinite alternate, light-animation 2s infinite; 
+}
+
+
+@keyframes color-change {
+    0% { color: rgb(30, 0, 255); }
+    20% { color: rgb(255, 0, 0); } 
+    40% { color: rgb(217, 255, 0); }
+    60% { color: rgb(120, 68, 218); }
+    80% { color: rgb(255, 0, 255); }
+    100%{ color: rgb(255, 255, 255); } 
+}
+
+/* Animación de luz azul */
+@keyframes light-animation {
+    0% {
+        text-shadow: 0 0 10px rgb(47, 0, 255); 
+    }
+    50% {
+        text-shadow: 0 0 100px rgb(47, 0, 255); 
+    }
+    100% {
+        text-shadow: 0 0 100px rgb(47, 0, 255); 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*IMAGEN DE FONDO..,,,*/
+
+
+
+.container {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.img-fluid {
+    max-width: 20%;
+    
+    height: auto;
+    animation: rotate 4s linear infinite, bounce 0.8s infinite alternate;
+    
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* efectos en h2 ,,,,,,,,,,,,,,,,,,*/
+
+.hover-effect-h2 {
+    color: rgb(0, 0, 0); 
+    transition: transform 0.001s ease, color 0.001s ease; 
+}
+
+
+.hover-effect-h2:hover {
+    color: rgb(255, 0, 0); 
+    transform: translateY(-5px); 
+}
+
+
+
+
+body,
+html {
+    height: 100%;
+    
+    margin: 0;
+    
+}
+
+body {
+    background-image: url('/../assets/index/siu.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: smooth;
+}

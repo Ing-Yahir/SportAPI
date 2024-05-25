@@ -1,0 +1,22 @@
+.navbar {
+    .container-fluid {
+      img {
+        width: 60px;
+        animation: rotate 4s linear infinite; // Agregamos la animación de rotación
+      }
+    }
+  
+    .navbar-brand {
+      padding-left: 40px;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); // Rotación completa de 360 grados
+    }
+  }
+  
